@@ -27,7 +27,7 @@ public class Handler {
 		for (int i = 0; i < object.size(); i++) {
 			GameObject tempObject = object.get(i);
 			
-			if(tempObject.getId() == ID.BasicEnemy || tempObject.getId() == ID.SmartEnemy || tempObject.getId() == ID.FastEnemy || tempObject.getId() == ID.LargeEnemy) removeObject(tempObject);
+			if(tempObject.getId() == ID.BasicEnemy || tempObject.getId() == ID.EnemyBoss || tempObject.getId() == ID.SmartEnemy || tempObject.getId() == ID.FastEnemy || tempObject.getId() == ID.LargeEnemy || tempObject.getId() == ID.EnemyBoss) removeObject(tempObject);
 		}
 	}
 	
