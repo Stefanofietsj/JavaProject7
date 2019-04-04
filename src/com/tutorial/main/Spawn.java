@@ -62,7 +62,7 @@ public class Spawn {
 				handler.clearEnemys();
 				handler.clearEnemys();
 				handler.clearEnemys();
-				handler.clearEnemys();
+				handler.clearEnemys();//yoo
 				handler.clearEnemys();
 				handler.clearEnemys();
 				handler.clearEnemys();

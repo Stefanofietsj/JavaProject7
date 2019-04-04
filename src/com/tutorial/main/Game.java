@@ -10,6 +10,7 @@ public class Game extends Canvas implements Runnable {
 	
 	private static final long serialVersionUID = 1550691097823471818L;
 	
+	//formaat van het scherm 
 	public static final int WIDTH = 1080, HEIGHT = WIDTH / 12 * 9;
 	
 	private Thread thread;
@@ -21,11 +22,13 @@ public class Game extends Canvas implements Runnable {
 	private Spawn spawner;
 	private Menu menu;
 	
+	//local enum
 	public enum STATE {
 		Menu,
 		Game
 	};
 	
+	//beginscherm is Menu of Game
 	public STATE gameState = STATE.Game;
 	
 	public Game() {
@@ -33,6 +36,7 @@ public class Game extends Canvas implements Runnable {
 		handler = new Handler();
 		this.addKeyListener(new KeyInput(handler));
 		
+		//scherm maken
 		new Window(WIDTH, HEIGHT, "BlokCollison", this);
 		
 		hud = new HUD();
@@ -40,6 +44,7 @@ public class Game extends Canvas implements Runnable {
 		menu = new Menu();
 		r = new Random();
 		
+		//players en enemy toevoegen aan Game
 		if(gameState == STATE.Game)
 		{		
 			handler.addObject(new Player(WIDTH/2-32, HEIGHT/2-32, ID.Player, handler, 1));
